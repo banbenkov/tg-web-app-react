@@ -8,19 +8,19 @@ const Form = () => {
     const [subject, setSubject] = useState('');
     const {tg} = useTelegram();
 
-    useEffect(() => {
-        tg.MainButton.setParams({
-            text: Text.sendData
-        })
-    }, [])
-
-    useEffect(() => {
-        if(!country || !city) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-        }
-    }, [country, city])
+    // useEffect(() => {
+    //     tg.MainButton.setParams({
+    //         text: Text.sendData
+    //     })
+    // }, [])
+    //
+    // useEffect(() => {
+    //     if(!country || !city) {
+    //         tg.MainButton.hide();
+    //     } else {
+    //         tg.MainButton.show();
+    //     }
+    // }, [country, city])
 
     const onChangeCountry = (e) => {
         setCountry(e.target.value);
